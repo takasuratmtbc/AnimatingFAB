@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cjF-Pg-zhi">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="792"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="vAX-oK-9yk" style="IBUITableViewCellStyleDefault" id="ykc-NR-Wu7">
@@ -43,35 +43,53 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="202-ZQ-OUi"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="65R-5p-zrs">
-                                <rect key="frame" x="348" y="812" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleAspectFit" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="65R-5p-zrs" customClass="FABButtonWithText" customModule="TableViewWithFAB" customModuleProvider="target">
+                                <rect key="frame" x="344" y="792" width="50" height="50"/>
+                                <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="2ip-ek-cod"/>
+                                    <constraint firstAttribute="height" constant="50" id="Gco-HD-YSK"/>
+                                </constraints>
+                                <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                                <state key="normal" image="plus">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                </state>
+                                <connections>
+                                    <action selector="addCheckButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GWY-Es-EAU"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="cjF-Pg-zhi" secondAttribute="bottom" id="7Iq-hu-Ifj"/>
                             <constraint firstItem="cjF-Pg-zhi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="KZm-XL-7Wu"/>
                             <constraint firstItem="cjF-Pg-zhi" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="hxs-gR-rfX"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="65R-5p-zrs" secondAttribute="trailing" constant="20" id="l3n-CL-6lV"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="65R-5p-zrs" secondAttribute="bottom" constant="20" id="sHP-r0-zYT"/>
                             <constraint firstItem="cjF-Pg-zhi" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="tQ8-J2-9ci"/>
-                            <constraint firstItem="65R-5p-zrs" firstAttribute="top" secondItem="cjF-Pg-zhi" secondAttribute="bottom" constant="20" id="xWL-he-4bW"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="fab" destination="65R-5p-zrs" id="WX7-MR-DWL"/>
+                        <outlet property="fabButtonHeightConstraint" destination="Gco-HD-YSK" id="W4K-ji-Ccc"/>
+                        <outlet property="fabButtonWidthConstraint" destination="2ip-ek-cod" id="9QP-hW-JRa"/>
                         <outlet property="tableView" destination="cjF-Pg-zhi" id="VaF-nw-GNR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="28.985507246376812" y="88.392857142857139"/>
+            <point key="canvasLocation" x="-323" y="42"/>
         </scene>
     </scenes>
     <resources>
+        <image name="plus" width="512" height="512"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

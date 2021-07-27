@@ -13,6 +13,7 @@
 		F9C824D626AF09B8003DC86B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9C824D426AF09B8003DC86B /* Main.storyboard */; };
 		F9C824D826AF09BA003DC86B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9C824D726AF09BA003DC86B /* Assets.xcassets */; };
 		F9C824DB26AF09BA003DC86B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9C824D926AF09BA003DC86B /* LaunchScreen.storyboard */; };
+		F9C824E326AF1B94003DC86B /* FABButtonWithText.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C824E226AF1B94003DC86B /* FABButtonWithText.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		F9C824D726AF09BA003DC86B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F9C824DA26AF09BA003DC86B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F9C824DC26AF09BA003DC86B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9C824E226AF1B94003DC86B /* FABButtonWithText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FABButtonWithText.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				F9C824D726AF09BA003DC86B /* Assets.xcassets */,
 				F9C824D926AF09BA003DC86B /* LaunchScreen.storyboard */,
 				F9C824DC26AF09BA003DC86B /* Info.plist */,
+				F9C824E226AF1B94003DC86B /* FABButtonWithText.swift */,
 			);
 			path = TableViewWithFAB;
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9C824E326AF1B94003DC86B /* FABButtonWithText.swift in Sources */,
 				F9C824D326AF09B8003DC86B /* ViewController.swift in Sources */,
 				F9C824CF26AF09B8003DC86B /* AppDelegate.swift in Sources */,
 				F9C824D126AF09B8003DC86B /* SceneDelegate.swift in Sources */,
